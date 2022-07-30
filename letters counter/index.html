@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>live letter counter </title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3> Live characters counter </h3>
+        <textarea id='txnArea' name='txnArea' placeholder="write your text here...!"onkeyup='funCheckLength("txnArea", "count", )'></textarea> 
+
+        <!-- onkeyup='funCheckLength("txnArea", "count", 300)' -->
+        <!--onkeyup='funWordCount() -->
+    <p>Total characters : <span id="count" class="count">0</span></p>
+   
+    
+
+
+
+
+
+</div>
+<script>
+ 
+
+function funWordCount(argField, argDiv,argLength){
+    checkTextAreaLen(argField,argLength);
+    var a =(document.getElementById(tnxArea).value);
+    const myArr = A.split(" ");
+    var b = (document.getElementById(tnxArea.a.split).value);
+    document.getElementById(tnxArea).innerHTML =  A + " "
+    
+    
+}
+function funCheckLength(argField, argDiv, argLength) {
+                checkTextAreaLen(argField, argLength);
+                len = (document.getElementById(argField).value).length;
+                document.getElementById(argDiv).style.display = "block";
+                document.getElementById(argDiv).innerHTML =  len +  " "
+            }
+function checkTextAreaLen(str1, str2) {
+                txt = document.getElementById(str1).value;
+                len = txt.length;
+                if (len > str2) {
+                    alert('Length exceeds than the limit');
+                    document.getElementById(str1).value = txt.substring(0, str2);
+                }//end of if
+            }
+</script>
+</body>
+</html>
